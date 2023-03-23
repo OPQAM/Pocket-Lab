@@ -29,9 +29,17 @@ I'll keep this README file with my doings.
 
 - Added example file to the repository (test)
 
-- Added the GitSteps.md, because I can't be assed to remember those commands, nor repeatedly web search.
+- Added the GitSteps.md, because I can't be assed to remember those commands, nor repeatedly web search
 
+- Remover the example file
 
+- Added Sketch1.pkt, Main.pkt, Sketch1.png & MainTable.ods
+
+- Sketch1.pkt holds a specific Packet Tracer step/practice. Main.pkt is the main file holding the Network
+
+- Sketch1.png has an image file of a specific table state. MainTable.ods is that main Table (Excel)
+
+- Idea: Perhaps use Git Branches to keep practice Networks (thus practicing a bit with Git)
 
 ***********
 24 Mar 2023
