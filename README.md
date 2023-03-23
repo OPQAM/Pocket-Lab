@@ -21,13 +21,16 @@ I'll keep this README file with my doings.
 23 Mar 2023
 ***********
 
-- Updated Packe Tracer to 8.2.1
+- Updated Packet Tracer to 8.2.1
 
 - Created empty Git Repository inside /home/ricardo/PLAYGROUND/PacketTracerProject
 
 - Added this README.md file with a short introduction and these notes
 
 - Added example file to the repository (test)
+
+- Added the GitSteps.md, because I can't be assed to remember those commands, nor repeatedly web search.
+
 
 
 ***********
