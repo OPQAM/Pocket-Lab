@@ -45,6 +45,11 @@ I'll keep this README file with my doings.
 24 Mar 2023
 ***********
 
+- Added a couple of machines to my network (still working with one area)
+
+- Gave the diagram some pretty coloring. Greyed the image table as well
+
+- Checked out the ARP PDU, and the ARP tables for all devices. After a couple of PINGs, it all fell into place.
 
 ***********
 25 Mar 2023
