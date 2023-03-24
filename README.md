@@ -3,7 +3,7 @@ This is a small project aimed at learning a bit more about Networks and Networki
 I'm doing this while I practice and learn stuff for the CCNA exam.
 
 The idea is to create a single .pkt file (Packet Tracer file) which contains a single network I build upon.
-I'll follow through Jeremy's IT Lab for the CCNA:
+I'll losely follow through Jeremy's IT Lab for the CCNA:
 
 https://www.youtube.com/watch?v=H8W9oMNSuwo&list=PLxbwE86jKRgMpuZuLBivzlM8s2Dk5lXBQ&index=1
 
@@ -11,10 +11,10 @@ https://www.youtube.com/watch?v=H8W9oMNSuwo&list=PLxbwE86jKRgMpuZuLBivzlM8s2Dk5l
 ...and add new machines (rooters, switches, etc) as I see fit, in order to keep on par with the lessons.
 In the end, I'll have a complex (enough) network, which will showcase most aspects within the syllabus.
 
-I'll keep this README file with my doings.
+
 ***********************************************************************************************************
 
--------------------------------8<-------------[ cut here ]-------->8---------------------------------------
+-------------------------------8<-------------[ cut here ]----------------->8---------------------------------------
 
 
 ***********
