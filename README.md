@@ -55,6 +55,13 @@ In the end, I'll have a complex (enough) network, which will showcase most aspec
 25 Mar 2023
 ***********
 
+- Created new /Sketches folder, to hold all the different sketches and keep the main folder clean
+
+- Created a .gitignore file so that I can better control which files get pushed
+
+- Added another network, with 12.0.0.0. An A class network. Connected a switch and two PCs to it.
+
+- Pinged the new network and from the new network. Everything is fine.
 
 ***********
 26 Mar 2023
