@@ -14,7 +14,7 @@ In the end, I'll have a complex (enough) network, which will showcase most aspec
 
 ***********************************************************************************************************
 
------------------------------------------------------------------8<-------------[ cut here ]---------------------->8--------------------------------------------------------------------
+----------------8<-------------[ cut here ]---------------------->8----------------------------------------
 
 
 ***********
@@ -49,7 +49,7 @@ In the end, I'll have a complex (enough) network, which will showcase most aspec
 
 - Gave the diagram some pretty coloring. Greyed the image table as well
 
-- Checked out the ARP PDU, and the ARP tables for all devices. After a couple of PINGs, it all fell into place.
+- Checked out the ARP PDU, and the ARP tables for all devices. After a couple of PINGs, it all fell into place
 
 ***********
 25 Mar 2023
@@ -59,14 +59,21 @@ In the end, I'll have a complex (enough) network, which will showcase most aspec
 
 - Created a .gitignore file so that I can better control which files get pushed
 
-- Added another network, with 12.0.0.0. An A class network. Connected a switch and two PCs to it.
+- Added another network, with 12.0.0.0. An A class network. Connected a switch and two PCs to it
 
-- Pinged the new network and from the new network. Everything is fine.
+- Pinged the new network and from the new network. Everything is fine
 
 ***********
 26 Mar 2023
 ***********
 
+- Added virtualization to my network, specifically 2 VLANs (home and office)
+	
+- Turned R0's g0/0 connection into a Router on a Stick, to accomodate the VLANs
+
+- Trunking protocols between switches and switch and router. Accessports between switches and end hosts
+
+- Corrected a minor typo on the table
 
 ***********
 27 Mar 2023
