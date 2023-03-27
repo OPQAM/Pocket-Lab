@@ -79,6 +79,13 @@ In the end, I'll have a complex (enough) network, which will showcase most aspec
 27 Mar 2023
 ***********
 
+- Changed the lab to include a L3 Switch (MSW2). Added another VLAN as well, and added a host to VLAN20
+
+- Haven't pushed the results just yet. Got some (theoretic) questions with subnetting and size/economy
+
+- As soon as these issues are ironed out, I'll commit and push the whole thing
+
+- Won't be deleting the RoaS. Just including an SVI for the neighbor's network
 
 ***********
 28 Mar 2023
