@@ -88,25 +88,12 @@ In the end, I'll have a complex (enough) network, which will showcase most aspec
 - Won't be deleting the RoaS. Just including an SVI for the neighbor's network
 
 ***********
-28 Mar 2023
-***********
-
-
-***********
-29 Mar 2023
-***********
-
-
-***********
-30 Mar 2023
-***********
-
-
-***********
 31 Mar 2023
 ***********
 
+- Added a new folder for experiments and stuff that doesn't belong (yet) to the main file
 
+- Two experiments (.pkt files) and a README were added to that folder
 
 
 
