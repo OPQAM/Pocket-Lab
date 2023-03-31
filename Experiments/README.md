@@ -14,4 +14,8 @@ Mar 31 2023
 
 - Main point was that after rebooting, the Router took the VLAN configuration from memory (NVRAM) which means that it won't work until we manually change it.
 
+- I've also added another file: BasicSecurityIssue.pkt
+I've just done a couple of simple security experiments - but packet tracer seems to be rather simplified in this regard. More infor can be read inside the .pkt file.
+Do note that all this concerns port security.
+
 
