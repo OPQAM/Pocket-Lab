@@ -95,7 +95,11 @@ In the end, I'll have a complex (enough) network, which will showcase most aspec
 
 - Two experiments (.pkt files) and a README were added to that folder
 
+***********
+26 Apr 2023
+***********
 
+- Added this repository to my 'school' computer, so that i can work from there
 
 
 
