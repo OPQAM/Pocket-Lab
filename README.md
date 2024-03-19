@@ -103,5 +103,10 @@ In the end, I'll have a complex (enough) network, which will showcase most aspec
 
 test3
 
+***********
+19 Mar 2024
+***********
 
+- Adding some exercises I've been doing for the CCNA
+- 
 
