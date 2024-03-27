@@ -1,4 +1,4 @@
-CCNA Command Summary
+ CCNA Command Summary
 
 Troubleshooting, Editing, Port #’s
  
@@ -529,42 +529,70 @@ Delete:  Not talking to the FR switch.
 
 ------------------------------------------------------------------------------------------------------------------------
 
-Access Control Lists
+###**Access Control Lists
  
 
-Standard Access Lists
- 
--Standard access lists only evaluate the source IP field. 
-They can use the ‘host’ and ‘any’ keywords, or apply wildcard masks. 
-They do not use port numbers.
-**Named Standard Access List :
-R-1(config)# ip access-list standard NAME (name the list)
-R-1(config-std-nacl)# deny host 192.168.20.5 log (deny a specific host / log matches)
-R-1(config-std-nacl)# permit 192.168.20.0  0.0.0.255 (permit subnet 192.168.20.0)
-R-1(config-std-nacl)# deny any (deny all other IP addresses)
-**Numbered IP Standard Access List:
-R-1(config)# access-list 25 deny host 192.168.20.5 (deny specific host)
-R-1(config)# access-list 25 permit 192.168.20.0  0.0.0.255 (permit entire subnet)
-R-1(config)# access-list 25 deny any (deny all other IP addresses)
- 
-Extended Access Lists
- 
-Action
-(required)	Protocol
-(required)	Source IP (required)	Compare (optional)	Port/Protocol
-(optional)	Dest IP (required)	Compare (optional)	Port/Protocol
-(optional)
-permit	IP	IP address &
-Wildcard mask	eq	23 – telnet	IP address &
-Wildcard mask	eq	23 – telnet
-deny	TCP	gt 	80 – http	gt 	80 – http	
-remark 	UDP	any	lt	443 – https	any	lt	443 – https
- 	ICMP	host  X.X.X.X 	neq	echo (ping)	host  X.X.X.X 	neq	echo (ping)
- 	OSPF	 	range	echo-reply	 	range	echo-reply
- 	EIGRP	 	 	 	 	 	 
- 	Etc…	 	 	 	 	 	 
-There can be additional optional commands (log, time-of-day, established, etc) on the end of most statements. 
-The protocol field must match destination port/protocol - if used (example: TCP=Telnet, ICMP=Ping, UDP=DNS).
+####**Show Commands:
+
+R1# show ip access-lists
+R1# show access-lists
+R1# show running-config | section access-list
+R1# show ip interface
+
+**Standard ACLs (ranges: 1-99, 1300-1999)
+
+**Standard Numbered Access Lists:
+R1(config)# access-list 1 permit ...
+R1(config)# access-list 1 deny ...
+R1(config)# access-list 1 permit any
+
+**Standard Named Access List:
+R1(config)# ip access-list standard (NAME)
+R1(config-std-nacl)# deny 192.168.20.5 0.0.0.0
+R1(config-std-nacl)# permit 192.168.20.0  0.0.0.255
+R1(config-std-nacl)# permit any
+
+But, in fact, we can also configure numbered ACLs on modern IOS like we do with named
+ACLs:
+
+R1(config)# ip access-list standard 1              (like the named one, but with a #)
+R1(config-std-nacl)# deny 192.168.1.1
+R1(config-std-nacl)# permit any
+
+Note that in the running-config, it will look like they were configured traditionally
+
+Also, we can delete these ACLs with the command 'no (NUMBER of ACL)':
+
+R1(config-std-nacl)# no 30
+
+NOTE(!): when configuring/editing numbered ACLs from global config mode, we can't
+delete individual entries, we can only delete the entire ACL!
+Ergo: if we want to delete or edit ACLs, they better be named ACLs (or create them
+using the more 'modern' method I explained above).
+
+Resequencing ACLs (to help with editing ACLs):
+
+ip access-list resequence (acl-id) (starting-seq-num) (increment)
+
+R1(config)# ip access-list resequence 15 10 10
+
+(so, we're basically working on the numbered access list 15, saying that it's
+first element is 10 and it will increment by 10 on every new element - like the default).
+This works for all ACLs.
+
+**Extended Access Lists (ranges: 100-199, 2000-2699):
+R1(config)# access-list (number) [permit | deny] (protocol) (src-ip) (dst-ip)
+
+We can also configure, like above they can be configred in named ACL config mode:
+R1(config)# ip access-list extended (name | number)
+R1(config-std-nacl)# (seq-num) [permit | deny] (protocol) (src-ip) (dst-ip)
+
+
+As shown, there are more options and possible configurations.
+Unlike standard ACLs, which are configured as closed to the destination as possible,
+Extended ACLs offer more control and thus are set as close as possible to the source.
+
+
 **Named Extended Access List:
 R-1(config)# ip access-list extended NAME (name the list)
 Example: Deny an individual host to an entire subnet for Telnet and also log matches:
