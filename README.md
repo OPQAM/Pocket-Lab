@@ -103,5 +103,16 @@ In the end, I'll have a complex (enough) network, which will showcase most aspec
 
 test3
 
+***********
+19 Mar 2024
+***********
 
+- Adding some exercises I've been doing for the CCNA
+- Started adding some practice labs and their respective PDFs
 
+***********
+25 Mar 2024
+***********
+
+- Updated the CCNA commands list .txt
+- Will continue beautifying it as I move along my study sessions
